@@ -1,6 +1,12 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
 import HelloWorld from './components/HelloWorld.vue'
+import BarChart from 'path/to/component/BarChart'
+
+export default {
+  name: 'App',
+  components: { BarChart }
+}
 </script>
 
 <template>
