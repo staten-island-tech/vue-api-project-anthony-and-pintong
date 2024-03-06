@@ -1,9 +1,13 @@
-<script setup>
-import TheWelcome from '../components/TheWelcome.vue'
+<template>
+  <BarChart />
+</template>
+
+<script>
+import BarChart from '../components/BarChart.vue'
+
+export default {
+  name: 'App',
+  components: { BarChart }
+}
 </script>
 
-<template>
-  <main>
-    <TheWelcome />
-  </main>
-</template>

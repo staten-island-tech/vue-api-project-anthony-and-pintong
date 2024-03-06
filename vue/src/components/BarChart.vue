@@ -32,3 +32,5 @@ export default {
 <style lang="scss" scoped>
 
 </style>
+
+<!-- https://data.cityofnewyork.us/City-Government/NYC-Wi-Fi-Hotspot-Locations/yjub-udmw/about_data -->
