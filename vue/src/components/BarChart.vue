@@ -34,3 +34,5 @@ export default {
 </style>
 
 <!-- https://data.cityofnewyork.us/City-Government/NYC-Wi-Fi-Hotspot-Locations/yjub-udmw/about_data -->
+
+https://data.cityofnewyork.us/resource/yjub-udmw.json
