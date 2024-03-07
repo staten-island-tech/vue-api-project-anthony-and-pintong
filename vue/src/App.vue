@@ -5,7 +5,7 @@
     <div class="wrapper">
       <nav>
         <RouterLink to="/">BarChart</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
+        <RouterLink to="/about">PieChart</RouterLink>
       </nav>
     </div>
   </header>
