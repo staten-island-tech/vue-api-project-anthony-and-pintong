@@ -19,7 +19,7 @@
       return {
         chartData: {
           labels: [ 'January', 'February', 'March' ],
-          datasets: [ { data: [40, 20, 12] } ]
+          datasets: [ { data: [4, 20, 122] } ]
         },
         chartOptions: {
           responsive: true

@@ -18,8 +18,8 @@ export default {
   data() {
     return {
       chartData: {
-        labels: [ 'January', 'February', 'March' ],
-        datasets: [ { data: [40, 20, 12] } ]
+        labels: [ 'January', 'February', 'March', 'April', 'May', 'June' ],
+        datasets: [ { data: [1564121, 265456, 12333, 19283, 12983, 120383] } ]
       },
       chartOptions: {
         responsive: true
