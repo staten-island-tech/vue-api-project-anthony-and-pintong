@@ -22,8 +22,8 @@ export default {
   data() {
     return {
       chartData: {
-        labels: ['January', 'February', 'March', 'April', 'May', 'June'],
-        datasets: [{ data: [1564121, 265456, 12333, 19283, 12983, 120383] }]
+        labels: ['Staten Island', 'Brooklyn', 'Queens', 'Manhattan', 'Bronx'],
+        datasets: [{ data: [21873, 265456, 12333, 19283, 12983] }]
       },
       chartOptions: {
         responsive: true
