@@ -1,6 +1,6 @@
 <template>
     <div>
-
+        <h1>{{ boroughWIFI.name }}</h1>
     </div>
 </template>
 
@@ -8,29 +8,26 @@
 import { Radar } from 'vue-chartjs'
 
 
-
 export default {
-    extends: Radar,
+    name: 'RadarChart',
+    components: { Radar },
     data() {
         return {
-            monster: {}
+            boroughWIFI: {}
         }
     },
     mounted: async function() {
-        await this.getPokemon() 
+        await this.getWIFI() 
     },
     methods: {
-        async function() {
-            const response = await fetch('https://data.cityofnewyork.us/resource/yjub-udmw.json');
-            const data = await response.json();
+        getWIFI: async function() {
+            let res = await fetch(`https://data.cityofnewyork.us/resource/yjub-udmw.jsonthis.$route.params.id}`)
+            let data = await res.json()
+            this.boroughWIFI = data
             }
     }
 }
-
-
-
 </script>
 
-<style lang="scss" scoped>
-
+<style scoped>
 </style>
