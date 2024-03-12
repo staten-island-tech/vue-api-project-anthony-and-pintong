@@ -1,14 +1,18 @@
 <template>
-  <Bar
-    id="my-chart-id"
-    :options="chartOptions"
-    :data="chartData"
-  />
+  <Bar id="my-chart-id" :options="chartOptions" :data="chartData" />
 </template>
 
 <script>
 import { Bar } from 'vue-chartjs'
-import { Chart as ChartJS, Title, Tooltip, Legend, BarElement, CategoryScale, LinearScale } from 'chart.js'
+import {
+  Chart as ChartJS,
+  Title,
+  Tooltip,
+  Legend,
+  BarElement,
+  CategoryScale,
+  LinearScale
+} from 'chart.js'
 
 ChartJS.register(Title, Tooltip, Legend, BarElement, CategoryScale, LinearScale)
 
@@ -18,8 +22,8 @@ export default {
   data() {
     return {
       chartData: {
-        labels: [ 'January', 'February', 'March', 'April', 'May', 'June' ],
-        datasets: [ { data: [1564121, 265456, 12333, 19283, 12983, 120383] } ]
+        labels: ['January', 'February', 'March', 'April', 'May', 'June'],
+        datasets: [{ data: [1564121, 265456, 12333, 19283, 12983, 120383] }]
       },
       chartOptions: {
         responsive: true
@@ -29,8 +33,6 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
-
-</style>
+<style lang="scss" scoped></style>
 
 <!-- https://data.cityofnewyork.us/City-Government/NYC-Wi-Fi-Hotspot-Locations/yjub-udmw/about_data -->

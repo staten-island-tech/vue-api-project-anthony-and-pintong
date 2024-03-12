@@ -1,6 +1,4 @@
-
 <template>
-
   <header>
     <div class="wrapper">
       <nav>
@@ -15,7 +13,6 @@
 
 <script>
 import { RouterLink, RouterView } from 'vue-router'
-
 </script>
 
 <style scoped>
