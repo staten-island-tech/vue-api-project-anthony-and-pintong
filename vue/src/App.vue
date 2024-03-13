@@ -5,7 +5,7 @@
     <div class="wrapper">
       <nav>
         <RouterLink to="/">BarChart</RouterLink> 
-        <RouterLink to="/vue\src\views\RadarView.vue">RadarChart</RouterLink>
+        <RouterLink to="/radar">RadarChart</RouterLink>
         <RouterLink to="/about">About</RouterLink>
 
       </nav>
