@@ -2,7 +2,7 @@
   <Bar id="my-chart-id" :options="chartOptions" :data="chartData" />
 </template>
 
-<script>
+<script v-for="data in listData">
 import { Bar } from 'vue-chartjs'
 import {
   Chart as ChartJS,
@@ -21,13 +21,32 @@ export default {
   components: { Bar },
   data() {
     return {
-      chartData: {
-        labels: ['Staten Island', 'Brooklyn', 'Queens', 'Manhattan', 'Bronx'],
-        datasets: [{ data: [21873, 265456, 12333, 19283, 12983] }]
-      },
       chartOptions: {
         responsive: true
-      }
+      },
+      mounted: async function () {
+        await this.getData()
+      },
+      methods: {
+        getData: async function () {
+          const URL = `https://data.cityofnewyork.us/resource/xywu-7bv9.json`
+          const response = await fetch(URL)
+          const data = await response.json()
+          console.log(data)
+          this.listData = data
+          let dataPrint = this.listData;
+
+          for (let i = 0; i < dataPrint.length; i++) {
+            console.log(dataPrint[i]);
+          }
+          this.finalData = dataPrint
+          return finalData[i]
+        }
+      },
+      chartData: {
+        labels: ['Bronx', 'Brooklyn', 'Manhattan', 'Queens', 'Staten Island'],
+        datasets: [{ data: [1,1,1,1,1] }]
+      },
     }
   }
 }
