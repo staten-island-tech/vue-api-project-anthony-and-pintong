@@ -45,7 +45,7 @@ export default {
       },
       chartData: {
         labels: ['Bronx', 'Brooklyn', 'Manhattan', 'Queens', 'Staten Island'],
-        datasets: [{ data: [1,1,1,1,1] }]
+        datasets: [{ data: [finalData,1,1,1,1] }]
       },
     }
   }
