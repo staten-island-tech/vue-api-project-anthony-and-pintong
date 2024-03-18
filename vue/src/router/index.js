@@ -18,9 +18,9 @@ const router = createRouter({
       component: () => import('../views/AboutView.vue')
     },
     {
-      path: '/radar',
-      name: 'RadarView',
-      component: () => import('../views/RadarView.vue')
+      path: '/pie',
+      name: 'PieView',
+      component: () => import('../views/PieView.vue')
     },
   ]
 })

@@ -1,23 +1,23 @@
 <template>
-  <div class="radar-view">
+  <div class="pie-view">
     <h1>Population of New York City Boroughs</h1>
-    <RadarChart />
+    <PieChart />
   </div>
 </template>
 
 <script>
-import RadarChart from '../components/RadarChart.vue';
+import PieChart from '../components/PieChart.vue';
 
 export default {
-  name: 'RadarView',
+  name: 'PieView',
   components: {
-    RadarChart,
+    PieChart,
   },
 };
 </script>
 
 <style scoped>
-.radar-view {
+.pie-view {
   text-align: center;
   padding: 20px;
 }
