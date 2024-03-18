@@ -9,10 +9,10 @@
         <RouterLink to="/about">About</RouterLink>
 
       </nav>
+      <router-view></router-view>
     </div>
   </header>
 
-  <RouterView />
 </template>
 
 <script>

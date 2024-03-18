@@ -19,7 +19,7 @@ const router = createRouter({
     },
     {
       path: '/radar',
-      name: 'radar',
+      name: 'RadarView',
       component: () => import('../views/RadarView.vue')
     },
   ]
