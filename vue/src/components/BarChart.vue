@@ -2,7 +2,7 @@
   <Bar id="my-chart-id" :options="chartOptions" :data="chartData" />
 </template>
 
-<script v-for="data in listData">
+<script>
 import { Bar } from 'vue-chartjs'
 import {
   Chart as ChartJS,
