@@ -1,47 +1,59 @@
 <template>
-    <Chart 
+    <Pie 
     v-if="loaded" 
-    type="pie"
     :data="chartData" 
     :options="chartOptions" />
 </template>
 
+  
 <script>
 import { Pie } from 'vue-chartjs'
-import { Chart as ChartJS, Title, Tooltip, Legend, BarElement, CategoryScale, LinearScale } from 'chart.js'
-ChartJS.register(Title, Tooltip, Legend, BarElement, CategoryScale, LinearScale)
+import { Chart as ChartJS, ArcElement, Tooltip, Legend, Title } from 'chart.js';
+
+ChartJS.register(ArcElement, Tooltip, Legend, Title);
 
 export default {
     name: 'PieChart',
     components: { Pie },
     data() {
-        return {
-            chartData: {
-                labels: [ 'Brooklyn', 'Queens', 'Bronx', 'Manhattan', 'Staten Island' ],
-                datasets: [ { 
-                    data: [40, 20, 12] 
-                } ]
+      return {
+        loaded: false,
+        chartData: {
+          labels: ['Brooklyn', 'Queens', 'Bronx', 'Manhattan', 'Staten Island'],
+          datasets: [
+            {
+              data: [],
+              backgroundColor: [
+                'rgba(255, 99, 132, 0.6)',
+                'rgba(54, 162, 235, 0.6)',
+                'rgba(255, 206, 86, 0.6)',
+                'rgba(75, 192, 192, 0.6)',
+                'rgba(153, 102, 255, 0.6)',
+              ],
             },
-            chartOptions: {
-                responsive: true
-            }
-        }
+          ],
+        },
+        chartOptions: {
+          responsive: true,
+        },
+      };
     },
-    Mounted: async function() {
-        await this.getData() 
+    mounted: async function() {
+      await this.getData();
+      this.loaded = true;
     },
     methods: {
         getData: async function() {
+          try {
             let res = await fetch(`https://data.cityofnewyork.us/resource/xywu-7bv9.json`)
-            let data = await res.json()
-            console.log(data)
-            this.chartdata = res
-            }
+            let data = await res.json();
+  
 
-            
-    }
-}
-</script>
-
-<style scoped>
-</style>
+          
+        } catch (error) {
+          console.error('Error fetching data:', error);
+        }
+      },
+    },
+  };
+  </script>
