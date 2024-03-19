@@ -47,8 +47,13 @@ export default {
           try {
             let res = await fetch(`https://data.cityofnewyork.us/resource/xywu-7bv9.json`)
             let data = await res.json();
-  
 
+
+            const Brooklyn = //pass data from api         "_2020": "2330295",
+            const Queens = 
+            const Bronx = 
+            const Manhattan =
+            const Staten Island = 
           
         } catch (error) {
           console.error('Error fetching data:', error);
