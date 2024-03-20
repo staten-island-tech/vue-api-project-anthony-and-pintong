@@ -39,7 +39,7 @@ export default {
       };
     },
     mounted: async function() {
-      await this.getData();
+      this.getData();
       this.loaded = true;
     },
     methods: {
@@ -47,13 +47,16 @@ export default {
           try {
             let res = await fetch(`https://data.cityofnewyork.us/resource/xywu-7bv9.json`)
             let data = await res.json();
+            console.log(data);
 
 
-            const Brooklyn = //pass data from api         "_2020": "2330295",
-            const Queens = 
-            const Bronx = 
-            const Manhattan =
-            const Staten Island = 
+            const Brooklyn = data.find((borough) => borough === "   Brooklyn");
+            console.log(Brooklyn) 
+            // const Queens = 
+            // const Bronx = 
+            // const Manhattan =
+            // const Staten Island = 
+
           
         } catch (error) {
           console.error('Error fetching data:', error);
@@ -62,3 +65,8 @@ export default {
     },
   };
   </script>
+
+  // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find
+ //const array1 = [5, 12, 8, 130, 44];
+
+ const found = array1.find((element) => element > 10);
