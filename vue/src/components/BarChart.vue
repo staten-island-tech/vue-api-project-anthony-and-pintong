@@ -1,5 +1,5 @@
 <template>
-  <Bar id="my-chart-id" :options="chartOptions" :data="chartData" />
+  <Bar v-if="loaded" id="my-chart-id" :options="chartOptions" :data="chartData" />
 </template>
 
 <script>
@@ -21,6 +21,8 @@ export default {
   components: { Bar },
   data() {
     return {
+      loaded: false,
+      chartData: null,
       chartOptions: {
         responsive: true
       },
@@ -29,23 +31,19 @@ export default {
       },
       methods: {
         getData: async function () {
+          this.loaded = false
           const URL = `https://data.cityofnewyork.us/resource/xywu-7bv9.json`
           const response = await fetch(URL)
-          const data = await response.json()
+          const data = await response.json().catch(error => console.log(error))
           console.log(data)
-          this.listData = data
-          let dataPrint = this.listData;
 
-          for (let i = 0; i < dataPrint.length; i++) {
-            console.log(dataPrint[i]);
+          for (let i = 0; i < data.length; i++) {
+            console.log(data[i]._2020, data[i].borough);
           }
-          this.finalData = dataPrint
-          return finalData[i]
+          this.loaded = true
+          this.chartData = data
+          return data
         }
-      },
-      chartData: {
-        labels: ['Bronx', 'Brooklyn', 'Manhattan', 'Queens', 'Staten Island'],
-        datasets: [{ data: [finalData,1,1,1,1] }]
       },
     }
   }
