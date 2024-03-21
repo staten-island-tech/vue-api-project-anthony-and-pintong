@@ -49,13 +49,18 @@ export default {
             let data = await res.json();
             console.log(data);
 
+            for (let i = 0; i < data.length; i++) {
+              console.log(data[i]._2020, data[i].borough); 
+              
 
-            const Brooklyn = data.find((borough) => borough === "   Brooklyn");
-            console.log(Brooklyn) 
-            // const Queens = 
-            // const Bronx = 
-            // const Manhattan =
-            // const Staten Island = 
+            const Brooklyn = data[2]._2020,
+            const Queens = data[4]._2020,
+            const Bronx = data[1]._2020,
+            const Manhattan = data[3]._2020,
+            const Staten Island = data[5]._2020,
+
+            }
+            
 
           
         } catch (error) {
@@ -66,7 +71,9 @@ export default {
   };
   </script>
 
-  // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find
  //const array1 = [5, 12, 8, 130, 44];
 
  const found = array1.find((element) => element > 10);
+
+ // const Brooklyn = data.find((borough) => borough === "   Brooklyn");
+ // console.log(Brooklyn) 
