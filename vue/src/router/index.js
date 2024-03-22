@@ -22,6 +22,11 @@ const router = createRouter({
       name: 'PieView',
       component: () => import('../views/PieView.vue')
     },
+    {
+      path: '/donut',
+      name: 'DonutView',
+      component: () => import('../views/DonutView.vue')
+    },
   ]
 })
 
