@@ -45,11 +45,11 @@ export default {
         let data = await res.json()
         console.log(data)
 
-        const Brooklyn = data.find((array) => array.borough === '   Brooklyn')._2020;
-        const Queens = data.find((array) => array.borough === '   Queens')._2020;
-        const Bronx = data.find((array) => array.borough === '   Bronx')._2020;
-        const Manhattan = data.find((array) => array.borough === '   Manhattan')._2020;
-        const StatenIsland = data.find((array) => array.borough === '   Staten Island')._2020;
+        const Brooklyn = data.find((array) => array.borough === "   Brooklyn")._2020;
+        const Queens = data.find((array) => array.borough === "   Queens")._2020;
+        const Bronx = data.find((array) => array.borough === "   Bronx")._2020;
+        const Manhattan = data.find((array) => array.borough === "   Manhattan")._2020;
+        const StatenIsland = data.find((array) => array.borough === "   Staten Island")._2020;
 
         console.log(Brooklyn)
         console.log(Queens)
