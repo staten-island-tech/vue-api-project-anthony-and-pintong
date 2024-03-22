@@ -6,7 +6,9 @@
       <nav>
         <RouterLink to="/">BarChart</RouterLink> 
         <RouterLink to="/pie">PieChart</RouterLink>
+        <RouterLink to="/Donut">Donut</RouterLink>
         <RouterLink to="/about">About</RouterLink>
+        
 
       </nav>
       <router-view></router-view>

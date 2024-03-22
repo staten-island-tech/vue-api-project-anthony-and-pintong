@@ -1,5 +1,5 @@
 <template>
-  <div class="pie-view">
+  <div class="donut-view">
     <h1>Population of New York City Boroughs</h1>
     <DonutChart />
   </div>
@@ -17,7 +17,7 @@ export default {
 </script>
 
 <style scoped>
-.pie-view {
+.donut-view {
   text-align: center;
   padding: 20px;
 }

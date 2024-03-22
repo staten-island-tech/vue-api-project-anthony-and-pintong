@@ -1,7 +1,7 @@
 <template>
-    <div>
-        <Donut v-if="loaded" :data="chartData"/>
-    </div>
+  <div>
+    <Doughnut v-if="loaded" :data="chartData" />
+  </div>
 </template>
 
 <script>
@@ -11,7 +11,7 @@ import { Doughnut } from 'vue-chartjs'
 ChartJS.register(ArcElement, Tooltip, Legend)
 export default {
     name: "DonutChart",
-    components: {Doughnut}
+    components: { Doughnut },
     data() {
         return {
             loaded: false,
@@ -26,31 +26,44 @@ export default {
                         'rgb(128, 0, 128)',
                         'rgb(99, 130, 130)',
                         'rgb(77, 179, 0)'
-                        ]
-                    }
-                ]
-    }
-    
+                        ],
+                    },
+                ],
             },
             chartOptions: {
-                responsive: true
-            },
-            mounted: async function() {
-                await this.getPokemon() 
-                this.loaded = true
-                
-            },
-            methods: {
-                getPokemon: async function() {
-                    let res = await fetch(`https://pokeapi.co/api/v2/pokemon/${this.$route.params.id}`)
-                    let data = await res.json()
-                    this.monster = data
-                    }
+                responsive: true,
             }
         }
+    },
+    mounted: async function() {
+        await this.getData();
+        this.loaded = true;
+
+    },
+    methods: {
+        getData: async function () {
+            try {
+                let res = await fetch(`https://data.cityofnewyork.us/resource/xywu-7bv9.json`)
+                let data = await res.json()
+                console.log(data)
+
+                const Brooklyn = data.find((array) => array.borough === "   Brooklyn")._2020;
+                const Queens = data.find((array) => array.borough === "   Queens")._2020;
+                const Bronx = data.find((array) => array.borough === "   Bronx")._2020;
+                const Manhattan = data.find((array) => array.borough === "   Manhattan")._2020;
+                const StatenIsland = data.find((array) => array.borough === "   Staten Island")._2020;
+
+                this.chartData.datasets[0].data[0] = Brooklyn;
+                this.chartData.datasets[0].data[1] = Queens;
+                this.chartData.datasets[0].data[2] = Bronx;
+                this.chartData.datasets[0].data[3] = Manhattan;
+                this.chartData.datasets[0].data[4] = StatenIsland;
+            } catch (error) {
+                console.error('Error fetching data:', error)
+            }
+        }
+    }
 }
 </script>
 
-<style lang="scss" scoped>
-
-</style>
+<style lang="scss" scoped></style>
