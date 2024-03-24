@@ -4,9 +4,10 @@
   <header>
     <div class="wrapper">
       <nav>
-        <RouterLink to="/">BarChart</RouterLink> 
-        <RouterLink to="/pie">PieChart</RouterLink>
-        <RouterLink to="/Donut">Donut</RouterLink>
+        <RouterLink to="/">Bar Chart</RouterLink> 
+        <RouterLink to="/pie">Pie Chart</RouterLink>
+        <RouterLink to="/donut">Doughnut Chart</RouterLink>
+        <RouterLink to="/line">Line Chart</RouterLink>  
         <RouterLink to="/about">About</RouterLink>
         
 
