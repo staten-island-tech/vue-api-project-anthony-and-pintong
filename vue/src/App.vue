@@ -2,7 +2,7 @@
   <header>
     <div class="wrapper">
       <nav>
-        <RouterLink to="/">BarChart</RouterLink>
+        <RouterLink to="/bar">BarChart</RouterLink>
         <RouterLink to="/about">PieChart</RouterLink>
       </nav>
     </div>

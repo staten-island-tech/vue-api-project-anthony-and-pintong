@@ -1,36 +1,119 @@
 <template>
-  <Pie id="my-chart-id" :options="chartOptions" :data="chartData" />
+  <Scatter v-if="loaded" id="my-chart-id" :options="chartOptions" :data="chartData" />
 </template>
 
 <script>
-import { Pie } from 'vue-chartjs'
+import { Scatter } from 'vue-chartjs'
 import {
   Chart as ChartJS,
   Title,
   Tooltip,
   Legend,
-  PieElement,
+  ScatterElement,
   CategoryScale,
   LinearScale
 } from 'chart.js'
 
-ChartJS.register(Title, Tooltip, Legend, PieElement, CategoryScale, LinearScale)
+ChartJS.register(Title, Tooltip, Legend, ScatterElement, CategoryScale, LinearScale)
 
 export default {
-  name: 'PieChart',
-  components: { Pie },
+  name: 'ScatterChart',
+  components: { Scatter },
   data() {
-    return {
-      chartData: {
-        labels: ['January', 'February', 'March'],
-        datasets: [{ data: [4, 20, 122] }]
+        return {
+            loaded: false,
+            chartData: {
+                labels:['Brooklyn', 'Queens', 'Bronx', 'Manhattan', 'Staten Island'],
+                datasets: [
+                    {   
+                      label: 'Scatter Dataset 1',
+      fill: false,
+      borderColor: '#f87979',
+      backgroundColor: '#f87979',
+      data: [
+        {
+          x: -2,
+          y: 4
+        },
+        {
+          x: -1,
+          y: 1
+        },
+        {
+          x: 0,
+          y: 0
+        },
+        {
+          x: 1,
+          y: 1
+        },
+        {
+          x: 2,
+          y: 4
+        }
+      ]
+    },
+    {
+      label: 'Scatter Dataset 2',
+      fill: false,
+      borderColor: '#7acbf9',
+      backgroundColor: '#7acbf9',
+      data: [
+        {
+          x: -2,
+          y: -4
+        },
+        {
+          x: -1,
+          y: -1
+        },
+        {
+          x: 0,
+          y: 1
+        },
+        {
+          x: 1,
+          y: -1
+        },
+        {
+          x: 2,
+          y: -4
+        }
+      ]
+                    },
+                ],
+            },
+            chartOptions: {
+                responsive: true,
+            }
+        }
+    },
+      mounted: async function () {
+        await this.getData()
+        this.loaded = true
       },
-      chartOptions: {
-        responsive: true
-      }
+      methods: {
+        getData: async function () {
+
+          const URL = `https://data.cityofnewyork.us/resource/xywu-7bv9.json`
+          const response = await fetch(URL)
+          const data = await response.json().catch(error => console.log(error))
+          console.log(data)
+
+          const Brooklyn = data.find((array) => array.borough === "   Brooklyn")._2020;
+          const Queens = data.find((array) => array.borough === "   Queens")._2020;
+          const Bronx = data.find((array) => array.borough === "   Bronx")._2020;
+          const Manhattan = data.find((array) => array.borough === "   Manhattan")._2020;
+          const StatenIsland = data.find((array) => array.borough === "   Staten Island")._2020;
+          this.chartData.datasets[0].data[0] = Brooklyn;
+          this.chartData.datasets[0].data[1] = Queens;
+          this.chartData.datasets[0].data[2] = Bronx;
+          this.chartData.datasets[0].data[3] = Manhattan;
+          this.chartData.datasets[0].data[4] = StatenIsland;
+          return data
+        }
+      },
     }
-  }
-}
 </script>
 
 <style lang="scss" scoped></style>
