@@ -70,6 +70,11 @@ export default {
                             display: true,
                             text: "Decade",
                         },
+                        min: 1950,
+                        max: 2020,
+                        ticks: {
+                            stepSize: 10,
+                        },
 
                     },
                     y: {
@@ -101,6 +106,12 @@ export default {
                 this.chartData.labels = years;
                 const boroughs = ['Brooklyn', 'Queens', 'Bronx', 'Manhattan', 'Staten Island']
                 
+                // for (let i = 0; i < years.length; i++) {
+                //     data.find((element) => element.borough.[0]);
+                //     this.chartData.datasets[0].data[0] = Brooklyn;
+                //     this.chartData.datasets[1].data[0] = Queens;
+                    
+                //     }
             
             } catch (error) {
                 console.error("Error fetching data:", error);
