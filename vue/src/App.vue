@@ -3,7 +3,7 @@
     <div class="wrapper">
       <nav>
         <RouterLink to="/bar">BarChart</RouterLink>
-        <RouterLink to="/about">PieChart</RouterLink>
+        <RouterLink to="/scatter">ScatterChart</RouterLink>
       </nav>
     </div>
   </header>
