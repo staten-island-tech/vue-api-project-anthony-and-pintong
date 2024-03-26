@@ -102,16 +102,16 @@ export default {
                 let data = await res.json();
                 console.log(data);
 
-                const years = ["1950", "1960", "1970", "1980", "1990", "2000", "2010", "2020"]
+                const years = ["_1950", "_1960", "_1970", "_1980", "_1990", "_2000", "_2010", "_2020"]
                 this.chartData.labels = years;
                 const boroughs = ['Brooklyn', 'Queens', 'Bronx', 'Manhattan', 'Staten Island']
                 
-                // for (let i = 0; i < years.length; i++) {
-                //     data.find((element) => element.borough.[0]);
-                //     this.chartData.datasets[0].data[0] = Brooklyn;
-                //     this.chartData.datasets[1].data[0] = Queens;
-                    
-                //     }
+                for (let i = 0; i < years.length; i++) {
+                    p = data.find((element) => element.borough.trim === boroughs[0]);
+                    this.chartData.datasets[0].data[0] = Brooklyn;
+                    this.chartData.datasets[1].data[0] = Queens;
+                    console.log(p)
+                    }
             
             } catch (error) {
                 console.error("Error fetching data:", error);
