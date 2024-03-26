@@ -8,6 +8,7 @@
         <RouterLink to="/pie">PieChart</RouterLink>
         <RouterLink to="/Donut">Donut</RouterLink>
         <RouterLink to="/about">About</RouterLink>
+        <RouterLink to="/scatter">Scatter</RouterLink>
         
 
       </nav>
