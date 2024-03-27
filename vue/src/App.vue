@@ -4,9 +4,9 @@
   <header>
     <div class="wrapper">
       <nav>
-        <RouterLink to="/">BarChart</RouterLink> 
-        <RouterLink to="/pie">PieChart</RouterLink>
-        <RouterLink to="/Donut">Donut</RouterLink>
+        <RouterLink to="/">Population in 2010</RouterLink> 
+        <RouterLink to="/pie">Population in 2020</RouterLink>
+        <RouterLink to="/Donut">Projected Population in 2030</RouterLink>
         <RouterLink to="/about">About</RouterLink>
         <RouterLink to="/scatter">Scatter</RouterLink>
         

@@ -1,6 +1,6 @@
 <template>
   <div class="pie-view">
-    <h1>Population of New York City Boroughs</h1>
+    <h1>Population of New York City Boroughs in 2020</h1>
     <PieChart />
   </div>
 </template>

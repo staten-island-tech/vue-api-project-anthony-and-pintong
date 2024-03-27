@@ -1,6 +1,6 @@
 <template>
   <div class="donut-view">
-    <h1>Population of New York City Boroughs</h1>
+    <h1>Projected Population of New York City Boroughs in 2030</h1>
     <DonutChart />
   </div>
 </template>
