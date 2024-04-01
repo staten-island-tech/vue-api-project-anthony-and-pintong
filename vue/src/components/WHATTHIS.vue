@@ -2,11 +2,11 @@
     <div class="about-container">
         <div class="text-container">
             <h1>Population of Boroughs in NYC</h1>
-            <p>
-                The population of the five boroughs of New York City has undergone significant changes over the last
-                decade. The unique culture and demographics of each borough have brought a lot of tourism and caused
-                fluctuations in population. To fully map out the extent of these population shifts, please click on the
-                links below to view in-depth charts that graph out the population changes in each borough over time.
+            <p>New York City, consists of five distinct boroughs - Manhattan, Brooklyn, Queens, Bronx, and Staten Island. Over the last century the popuation has undergone many changes reflecting the states growing landscape. Each borough boasts different attractions and experiences making it a top destination for tourists around the world. 
+                
+                
+                
+                To fully visualize these population shifts and gain a deeper understanding of the demographic trends shaping New York City, please click on the links below to view in-depth charts that display these data.
             </p>
             <ul class="links-container">
                 <li>

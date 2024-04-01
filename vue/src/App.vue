@@ -5,8 +5,8 @@
     <div class="wrapper">
       <router-view></router-view>
       <nav>
-        <RouterLink to="/WHATTHIS">Population of NYC Boroughs</RouterLink> 
-        <RouterLink to="/">Population of Boroughs in 2010</RouterLink> 
+        <RouterLink to="/">Population of NYC Boroughs</RouterLink> 
+        <RouterLink to="/bar">Population of Boroughs in 2010</RouterLink> 
         <RouterLink to="/pie">Population Boroughs in 2020</RouterLink>
         <RouterLink to="/donut">Projected Population of Boroughs in 2030</RouterLink>
         <RouterLink to="/line">Boroughs Population Timeline</RouterLink>
