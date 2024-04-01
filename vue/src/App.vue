@@ -4,11 +4,13 @@
   <header>
     <div class="wrapper">
       <nav>
+<<<<<<< HEAD
         <RouterLink to="/">Population in 2010</RouterLink> 
         <RouterLink to="/pie">Population in 2020</RouterLink>
         <RouterLink to="/Donut">Projected Population in 2030</RouterLink>
+        <RouterLink to="/line">Line Chart</RouterLink>
         <RouterLink to="/about">About</RouterLink>
-        <RouterLink to="/scatter">Scatter</RouterLink>
+        <RouterLink to="/scatter">Scatter</RouterLink>  
         
 
       </nav>

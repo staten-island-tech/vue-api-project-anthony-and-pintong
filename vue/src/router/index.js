@@ -18,6 +18,11 @@ const router = createRouter({
       name: 'DonutView',
       component: () => import('../views/DonutView.vue')
     },
+    {
+      path: '/line',
+      name: 'LineView',
+      component: () => import('../views/LineView.vue')
+    }
   ]
 })
 

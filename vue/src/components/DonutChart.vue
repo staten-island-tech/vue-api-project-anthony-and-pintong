@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class = "donut">
     <Doughnut v-if="loaded" :data="chartData" />
   </div>
 </template>
@@ -66,4 +66,23 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+
+.donut {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center; 
+    width: 100%;
+    border: 3px solid gray;
+    padding: 10px;
+    text-align: center;
+    border-radius: 15px; 
+    margin: 0 auto; 
+    background-color: #f0f0f0;
+    font-size: 1.2em;
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.1);
+}
+
+
+</style>
