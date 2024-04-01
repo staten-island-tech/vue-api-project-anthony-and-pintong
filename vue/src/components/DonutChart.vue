@@ -68,6 +68,10 @@ export default {
 
 <style lang="scss" scoped>
 
-
+.donut {
+    width: 800px;
+    height: 600px;
+    margin: 0 auto;
+}
 
 </style>

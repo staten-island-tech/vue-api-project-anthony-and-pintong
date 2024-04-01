@@ -1,5 +1,5 @@
 <template>
-<div>
+<div class="chart-container">
     <Line v-if="loaded" :data="chartData" :options="chartOptions" />
 </div>
 </template>
@@ -127,4 +127,12 @@ export default {
 
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+
+.chart-container {
+    width: 800px;
+    height: 600px;
+    margin: 0 auto;
+}
+
+</style>

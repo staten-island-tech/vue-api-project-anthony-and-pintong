@@ -70,6 +70,20 @@ export default {
 }
 </script>
 
+
+<style lang="scss" scoped>
+
+.chart-container {
+    width: 800px;
+    height: 600px;
+    margin: 0 auto;
+}
+
+</style>
+
+
+
+
 //const array1 = [5, 12, 8, 130, 44]; const found = array1.find((element) => element > 10); //
 console.log(Brooklyn) // for (let i = 0; i < data.length; i++) { // console.log(data[i]._2020,
 data[i].borough);

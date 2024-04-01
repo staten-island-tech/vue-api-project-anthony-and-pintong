@@ -8,7 +8,7 @@
         <RouterLink to="/WHATTHIS">Population of NYC Boroughs</RouterLink> 
         <RouterLink to="/">Population of Boroughs in 2010</RouterLink> 
         <RouterLink to="/pie">Population Boroughs in 2020</RouterLink>
-        <RouterLink to="/Donut">Projected Population of Boroughs in 2030</RouterLink>
+        <RouterLink to="/donut">Projected Population of Boroughs in 2030</RouterLink>
         <RouterLink to="/line">Boroughs Population Timeline</RouterLink>
         <RouterLink to="/scatter">Scatter</RouterLink>  
         

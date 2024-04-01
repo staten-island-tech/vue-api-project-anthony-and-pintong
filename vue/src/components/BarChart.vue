@@ -1,6 +1,9 @@
 <template>
+<div class="chart-container">
   <Bar v-if="loaded" id="my-chart-id" :options="chartOptions" :data="chartData" />
+</div>
 </template>
+
 
 <script>
 import { Bar } from 'vue-chartjs'
@@ -71,6 +74,12 @@ export default {
     }
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.chart-container {
+  width: 800px;
+  height: 600px;
+  margin: 0 auto;
+}
+</style>
 
 <!-- https://data.cityofnewyork.us/City-Government/NYC-Wi-Fi-Hotspot-Locations/yjub-udmw/about_data -->
