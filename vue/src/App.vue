@@ -3,16 +3,17 @@
 
   <header>
     <div class="wrapper">
+      <router-view></router-view>
       <nav>
-        <RouterLink to="/">Population in 2010</RouterLink> 
-        <RouterLink to="/pie">Population in 2020</RouterLink>
-        <RouterLink to="/Donut">Projected Population in 2030</RouterLink>
-        <RouterLink to="/line">Line Chart</RouterLink>
+        <RouterLink to="/WHATTHIS">Population of NYC Boroughs</RouterLink> 
+        <RouterLink to="/">Population of Boroughs in 2010</RouterLink> 
+        <RouterLink to="/pie">Population Boroughs in 2020</RouterLink>
+        <RouterLink to="/Donut">Projected Population of Boroughs in 2030</RouterLink>
+        <RouterLink to="/line">Boroughs Population Timeline</RouterLink>
         <RouterLink to="/scatter">Scatter</RouterLink>  
         
 
       </nav>
-      <router-view></router-view>
     </div>
   </header>
 
