@@ -10,7 +10,7 @@
             </p>
             <ul class="links-container">
                 <li>
-                    <RouterLink to="/">Population of Boroughs in 2010</RouterLink>
+                    <RouterLink to="/bar">Population of Boroughs in 2010</RouterLink>
                 </li>
                 <li>
                     <RouterLink to="/pie">Population Boroughs in 2020</RouterLink>
