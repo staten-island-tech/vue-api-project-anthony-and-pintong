@@ -1,7 +1,7 @@
 <template>
-  <div>
+<div>
     <Line v-if="loaded" :data="chartData" :options="chartOptions" />
-  </div>
+</div>
 </template>
 
 <script>
@@ -60,7 +60,7 @@ export default {
                         text: "Popuation Trend By Borough",
                     },
                     legend: {
-                        position: "bottom",
+                        position: "left",
                     },
                     
                 },
@@ -70,19 +70,16 @@ export default {
                             display: true,
                             text: "Decade",
                         },
-                        min: 1950,
-                        max: 2020,
-                        ticks: {
-                            stepSize: 10,
-                        },
 
                     },
                     y: {
-                        min: 0,
-                        max: 3125000,
                         ticks: {
                             stepSize: 125000,
-                        }
+                        },
+                        title: {
+                            display: true,
+                            text: "Population",
+                        },
                     }
                 }
 
@@ -91,7 +88,7 @@ export default {
         }
     },
     mounted: async function () {
-        await this.getData;
+        await this.getData();
         this.loaded = true;
     },
 
@@ -102,16 +99,20 @@ export default {
                 let data = await res.json();
                 console.log(data);
 
-                const years = ["_1950", "_1960", "_1970", "_1980", "_1990", "_2000", "_2010", "_2020"]
+                const years = ["1950", "1960", "1970", "1980", "1990", "2000", "2010", "2020"];
                 this.chartData.labels = years;
                 const boroughs = ['Brooklyn', 'Queens', 'Bronx', 'Manhattan', 'Staten Island']
                 
-                for (let i = 0; i < years.length; i++) {
-                    p = data.find((element) => element.borough.trim === boroughs[0]);
-                    this.chartData.datasets[0].data[0] = Brooklyn;
-                    this.chartData.datasets[1].data[0] = Queens;
-                    console.log(p)
+                for (let i = 0; i < boroughs.length; i++) {
+                    const whichBorough = data.find((element) => element.borough.trim() === boroughs[i]);
+                    
+                    for (let q = 0; q < years.length; q++) {
+                        const value = whichBorough[`_${years[q]}`];
+                        this.chartData.datasets[i].data.push(value);
                     }
+                
+                }
+
             
             } catch (error) {
                 console.error("Error fetching data:", error);
