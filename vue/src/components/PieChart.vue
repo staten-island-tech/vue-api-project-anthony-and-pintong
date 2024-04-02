@@ -1,5 +1,7 @@
 <template>
+<div class="chart-container">
   <Pie v-if="loaded" :data="chartData"/>
+</div>
 </template>
 
 <script>
@@ -78,7 +80,6 @@ export default {
     height: 600px;
     margin: 0 auto;
 }
-
 </style>
 
 

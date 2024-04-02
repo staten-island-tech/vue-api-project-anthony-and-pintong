@@ -1,7 +1,9 @@
 <template>
+<div class="chart-container">
   <div class = "donut">
     <Doughnut v-if="loaded" :data="chartData" />
   </div>
+</div>
 </template>
 
 <script>

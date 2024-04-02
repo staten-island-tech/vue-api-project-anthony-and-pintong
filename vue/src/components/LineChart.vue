@@ -24,31 +24,26 @@ export default {
                         label: "Brooklyn",
                         data: [],
                         borderColor: "rgb(255, 99, 132)",
-                        backgroundColor: "rgba(255, 99, 132, 0.2)",
                     },
                     {
                         label: "Queens",
                         data: [],
                         borderColor: "rgb(54, 162, 235)",
-                        backgroundColor: "rgba(54, 162, 235, 0.2)",
                     },
                     {
                         label: "Bronx",
                         data: [],
                         borderColor: "rgb(255, 206, 86)",
-                        backgroundColor: "rgba(255, 206, 86, 0.2)",
                     },
                     {
                         label: "Manhattan",
                         data: [],
                         borderColor: "rgb(153, 102, 255)",
-                        backgroundColor: "rgba(153, 102, 255, 0.2)",
                     },
                     {
                         label: "Staten Island",
                         data: [],
                         borderColor: "rgb(75, 192, 192)",
-                        backgroundColor: "rgba(75, 192, 192, 0.2)",
                     },
                 ]
             },

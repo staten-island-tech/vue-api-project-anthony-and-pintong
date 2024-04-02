@@ -46,7 +46,8 @@ import { RouterLink } from 'vue-router';
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #181818;
+    background-color: #292626;
+    color:antiquewhite;
 }
 
 .text-container,
