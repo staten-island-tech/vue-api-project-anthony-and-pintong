@@ -40,7 +40,7 @@ import { RouterLink } from 'vue-router';
 <style lang="scss" scoped>
 .about-container {
     width: 100vw;
-    height: 100vh;
+    height: 200vh;
     padding: 0;
     margin: 0;
     display: flex;
