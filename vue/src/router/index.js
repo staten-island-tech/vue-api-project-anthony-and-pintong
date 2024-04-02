@@ -27,6 +27,11 @@ const router = createRouter({
       path: '/line',
       name: 'LineView',
       component: () => import('../views/LineView.vue')
+    },
+    {
+      path: '/scatter',
+      name: 'ScaterView',
+      component: () => import('../components/ScatterChart.vue')
     }
   ]
 })

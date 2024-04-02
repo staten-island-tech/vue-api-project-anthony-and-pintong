@@ -21,6 +21,9 @@
                 <li>
                     <RouterLink to="/line">Boroughs Population Timeline</RouterLink>
                 </li>
+                <li>
+                    <RouterLink to="/scatter">Population of NYC Timeline</RouterLink>
+                </li>
             </ul>
         </div>
         <div class="img-container">
@@ -43,7 +46,7 @@ import { RouterLink } from 'vue-router';
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: azure;
+    background-color: #181818;
 }
 
 .text-container,

@@ -1,5 +1,6 @@
 <template>
 <div class="chart-container">
+<h1>Population of Boroughs in 2010</h1>
   <Bar v-if="loaded" id="my-chart-id" :options="chartOptions" :data="chartData" />
 </div>
 </template>
@@ -75,10 +76,18 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
 .chart-container {
-  width: 800px;
-  height: 600px;
-  margin: 0 auto;
+    width: 55rem;
+    height: 41.250rem;
+    margin: 0 auto;
+    margin-top: 5rem;
+}
+
+h1 {
+  margin: auto;
+  text-align: center;
+  padding: 20px;
 }
 </style>
 
